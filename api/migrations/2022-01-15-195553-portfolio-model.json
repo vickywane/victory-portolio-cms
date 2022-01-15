@@ -1,0 +1,572 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "createEnum",
+			"enumName": "BlogState",
+			"values": [
+				"draft",
+				"published"
+			]
+		},
+		{
+			"modification": "createEnum",
+			"enumName": "ExperiencesType",
+			"values": [
+				"internship",
+				"FullTime",
+				"Engagements"
+			]
+		},
+		{
+			"modification": "createEnum",
+			"enumName": "TalksType",
+			"values": [
+				"podcast",
+				"talk",
+				"interview"
+			]
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Blog",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "blog"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Experiences",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "experiences"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Talks",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "talks"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Certifications",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "certifications"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Blog",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Blog",
+			"field": {
+				"name": "createdAt",
+				"columnName": "created_at",
+				"nullable": false,
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Blog",
+			"field": {
+				"name": "summary",
+				"columnName": "summary",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Blog",
+			"field": {
+				"name": "publish_link",
+				"columnName": "publish_link",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Blog",
+			"field": {
+				"name": "state",
+				"columnName": "state",
+				"nullable": true,
+				"default": "draft",
+				"type": "Enum",
+				"columnType": "BlogState"
+			},
+			"fillValue": "draft"
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Experiences",
+			"field": {
+				"name": "company",
+				"columnName": "company",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Experiences",
+			"field": {
+				"name": "role",
+				"columnName": "role",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Experiences",
+			"field": {
+				"name": "start_date",
+				"columnName": "start_date",
+				"nullable": false,
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Experiences",
+			"field": {
+				"name": "end_date",
+				"columnName": "end_date",
+				"nullable": true,
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Experiences",
+			"field": {
+				"name": "summary",
+				"columnName": "summary",
+				"nullable": true,
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Experiences",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"nullable": true,
+				"default": "FullTime",
+				"type": "Enum",
+				"columnType": "ExperiencesType"
+			},
+			"fillValue": "FullTime"
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Experiences",
+			"field": {
+				"name": "external_link",
+				"columnName": "external_link",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Talks",
+			"field": {
+				"name": "date_created",
+				"columnName": "date_created",
+				"nullable": false,
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Talks",
+			"field": {
+				"name": "external_link",
+				"columnName": "external_link",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Talks",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Talks",
+			"field": {
+				"name": "summary",
+				"columnName": "summary",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Talks",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"nullable": true,
+				"default": "talk",
+				"type": "Enum",
+				"columnType": "TalksType"
+			},
+			"fillValue": "talk"
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Certifications",
+			"field": {
+				"name": "date_created",
+				"columnName": "date_created",
+				"nullable": false,
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Certifications",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Certifications",
+			"field": {
+				"name": "verification_id",
+				"columnName": "verification_id",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Certifications",
+			"field": {
+				"name": "external_link",
+				"columnName": "external_link",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Blog",
+			"unique": {
+				"fields": [
+					"title"
+				],
+				"name": "unique_Blog_title_11bc38"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Blog",
+			"unique": {
+				"fields": [
+					"publish_link"
+				],
+				"name": "unique_Blog_publish_link_266a93"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Experiences",
+			"unique": {
+				"fields": [
+					"role"
+				],
+				"name": "unique_Experiences_role_b65b84"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Talks",
+			"unique": {
+				"fields": [
+					"external_link"
+				],
+				"name": "unique_Talks_external_link_d3f712"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Talks",
+			"unique": {
+				"fields": [
+					"title"
+				],
+				"name": "unique_Talks_title_6109dc"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Talks",
+			"unique": {
+				"fields": [
+					"summary"
+				],
+				"name": "unique_Talks_summary_c476e5"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Certifications",
+			"unique": {
+				"fields": [
+					"title"
+				],
+				"name": "unique_Certifications_title_c3c418"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Certifications",
+			"unique": {
+				"fields": [
+					"verification_id"
+				],
+				"name": "unique_Certifications_verification_id_bbd742"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Certifications",
+			"unique": {
+				"fields": [
+					"external_link"
+				],
+				"name": "unique_Certifications_external_link_b423ff"
+			}
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/roles/admin",
+					"value": {
+						"variables": {},
+						"stages": "*",
+						"entities": {
+							"Blog": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"title": true,
+										"createdAt": true,
+										"summary": true,
+										"publish_link": true,
+										"state": true
+									},
+									"read": {
+										"id": true,
+										"title": true,
+										"createdAt": true,
+										"summary": true,
+										"publish_link": true,
+										"state": true
+									},
+									"update": {
+										"id": true,
+										"title": true,
+										"createdAt": true,
+										"summary": true,
+										"publish_link": true,
+										"state": true
+									},
+									"delete": true
+								}
+							},
+							"Experiences": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"company": true,
+										"role": true,
+										"start_date": true,
+										"end_date": true,
+										"summary": true,
+										"type": true,
+										"external_link": true
+									},
+									"read": {
+										"id": true,
+										"company": true,
+										"role": true,
+										"start_date": true,
+										"end_date": true,
+										"summary": true,
+										"type": true,
+										"external_link": true
+									},
+									"update": {
+										"id": true,
+										"company": true,
+										"role": true,
+										"start_date": true,
+										"end_date": true,
+										"summary": true,
+										"type": true,
+										"external_link": true
+									},
+									"delete": true
+								}
+							},
+							"Talks": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"date_created": true,
+										"external_link": true,
+										"title": true,
+										"summary": true,
+										"type": true
+									},
+									"read": {
+										"id": true,
+										"date_created": true,
+										"external_link": true,
+										"title": true,
+										"summary": true,
+										"type": true
+									},
+									"update": {
+										"id": true,
+										"date_created": true,
+										"external_link": true,
+										"title": true,
+										"summary": true,
+										"type": true
+									},
+									"delete": true
+								}
+							},
+							"Certifications": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"date_created": true,
+										"title": true,
+										"verification_id": true,
+										"external_link": true
+									},
+									"read": {
+										"id": true,
+										"date_created": true,
+										"title": true,
+										"verification_id": true,
+										"external_link": true
+									},
+									"update": {
+										"id": true,
+										"date_created": true,
+										"title": true,
+										"verification_id": true,
+										"external_link": true
+									},
+									"delete": true
+								}
+							}
+						}
+					}
+				}
+			]
+		}
+	]
+}
