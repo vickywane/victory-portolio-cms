@@ -22,6 +22,27 @@ export default defineType({
       of: [{type: 'block'}],
     }),
     defineField({
+      title: 'Body',
+      name: 'body',
+      type: 'array',
+      of: [{type: 'block'}],
+    }),
+  
+    defineField({
+      title: 'Recommended',
+      name: 'recommended',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [
+            {type: 'article'},
+          ]
+        }
+      ]
+    }),
+
+    defineField({
       name: 'is_travel_featured',
       title: 'Is Travel Featured?',
       type: 'boolean',
