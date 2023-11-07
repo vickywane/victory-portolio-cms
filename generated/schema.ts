@@ -138,6 +138,20 @@ export interface Article extends SanityDocument {
   summary?: Array<SanityKeyed<SanityBlock>>;
 
   /**
+   * Body — `array`
+   *
+   *
+   */
+  body?: Array<SanityKeyed<SanityBlock>>;
+
+  /**
+   * Recommended — `array`
+   *
+   *
+   */
+  recommended?: Array<SanityKeyedReference<Article>>;
+
+  /**
    * Is Travel Featured? — `boolean`
    *
    *
