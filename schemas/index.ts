@@ -8,10 +8,12 @@ import Engagement from './engagement'
 import companiesList from './companiesList'
 import Company from './company'
 import HomePage from './homePage'
+import BlogCategory from './blogCategory'
 
 export const schemaTypes = [
   HomePage,
   Article,
+  BlogCategory,
   Notification,
   Engagement,
   Gallery,
