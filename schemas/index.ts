@@ -8,10 +8,13 @@ import Engagement from './engagement'
 import companiesList from './companiesList'
 import Company from './company'
 import HomePage from './homePage'
+import BlogCategory from './blogCategory'
+import { Youtube } from './youtube/type'
 
 export const schemaTypes = [
   HomePage,
   Article,
+  BlogCategory,
   Notification,
   Engagement,
   Gallery,
@@ -19,6 +22,7 @@ export const schemaTypes = [
   WorkExperience,
   Review,
   companiesList,
+  Youtube,
   blockContent,
 ]
 
