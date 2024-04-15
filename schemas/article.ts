@@ -28,6 +28,9 @@ export default defineType({
       of: [
         {type: 'block'},
         {type: 'cloudinary.asset'},
+        defineArrayMember({
+          type: 'youtube'
+        })
       ],
     }),
   
