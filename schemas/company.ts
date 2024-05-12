@@ -8,6 +8,7 @@ export default defineType({
     defineField({
       name: 'name',
       title: 'Name',
+      description: "Company Name",
       type: 'string',
     }),
     defineField({
@@ -45,7 +46,7 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'role',
+      title: 'name',
     },
   },
 })
