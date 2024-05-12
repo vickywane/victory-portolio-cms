@@ -10,6 +10,7 @@ import Company from './company'
 import HomePage from './homePage'
 import BlogCategory from './blogCategory'
 import { Youtube } from './youtube/type'
+import VacationPreview from './vacationPreview'
 
 export const schemaTypes = [
   HomePage,
@@ -24,6 +25,7 @@ export const schemaTypes = [
   companiesList,
   Youtube,
   blockContent,
+  VacationPreview
 ]
 
 export default schemaTypes;
